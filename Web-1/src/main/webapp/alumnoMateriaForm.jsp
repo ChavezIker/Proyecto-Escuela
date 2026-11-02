@@ -22,7 +22,7 @@
                 <option value="">Seleccione un alumno</option>
                 <c:forEach var="a" items="${alumnos}">
                     <option value="${a.id}" <c:if test="${alumnoMateria != null && alumnoMateria.alumno.id == a.id}">selected</c:if>>
-                        ${a.nombre} ${a.apellidos}
+                        ${a.nombre}
                     </option>
                 </c:forEach>
             </select>

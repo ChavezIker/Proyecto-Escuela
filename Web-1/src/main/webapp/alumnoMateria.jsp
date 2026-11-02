@@ -26,7 +26,7 @@
             <c:forEach var="am" items="${listAlumnoMateria}">
                 <tr>
                     <td>${am.id}</td>
-                    <td>${am.alumno.nombre} ${am.alumno.apellidos}</td>
+                    <td>${am.alumno.nombre}</td>
                     <td>${am.materia.nombre}</td>
                     <td>${am.calificacion}</td>
                     <td>
