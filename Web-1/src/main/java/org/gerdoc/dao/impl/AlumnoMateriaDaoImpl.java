@@ -2,7 +2,7 @@ package org.gerdoc.dao.impl;
 
 import java.util.List;
 import org.gerdoc.dao.AlumnoMateriaDao;
-import org.gerdoc.helper.HibernateUtil;
+import org.gerdoc.util.HibernateUtil;
 import org.gerdoc.model.AlumnoMateria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
