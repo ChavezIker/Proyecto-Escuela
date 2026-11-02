@@ -64,8 +64,8 @@ public class AlumnoMateriaServlet extends HttpServlet {
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Alumno> alumnos = alumnoService.getAlumnoList();
-        List<Materia> materias = materiaService.getMateriaList();
+        List<Alumno> alumnos = alumnoService.findAll();
+        List<Materia> materias = materiaService.findAll();
         request.setAttribute("alumnos", alumnos);
         request.setAttribute("materias", materias);
         request.getRequestDispatcher("alumnoMateriaForm.jsp").forward(request, response);
@@ -74,8 +74,8 @@ public class AlumnoMateriaServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.parseInt(request.getParameter("id"));
         AlumnoMateria existing = alumnoMateriaService.getAlumnoMateriaById(id);
-        List<Alumno> alumnos = alumnoService.getAlumnoList();
-        List<Materia> materias = materiaService.getMateriaList();
+        List<Alumno> alumnos = alumnoService.findAll();
+        List<Materia> materias = materiaService.findAll();
         request.setAttribute("alumnoMateria", existing);
         request.setAttribute("alumnos", alumnos);
         request.setAttribute("materias", materias);
@@ -87,8 +87,8 @@ public class AlumnoMateriaServlet extends HttpServlet {
         Integer materiaId = Integer.parseInt(request.getParameter("materiaId"));
         BigDecimal calificacion = new BigDecimal(request.getParameter("calificacion"));
 
-        Alumno alumno = alumnoService.getAlumnoById(alumnoId);
-        Materia materia = materiaService.getMateriaById(materiaId);
+        Alumno alumno = alumnoService.findById(alumnoId.longValue());
+        Materia materia = materiaService.findById(materiaId.longValue());
 
         AlumnoMateria am = new AlumnoMateria();
         am.setAlumno(alumno);
@@ -105,8 +105,8 @@ public class AlumnoMateriaServlet extends HttpServlet {
         Integer materiaId = Integer.parseInt(request.getParameter("materiaId"));
         BigDecimal calificacion = new BigDecimal(request.getParameter("calificacion"));
 
-        Alumno alumno = alumnoService.getAlumnoById(alumnoId);
-        Materia materia = materiaService.getMateriaById(materiaId);
+        Alumno alumno = alumnoService.findById(alumnoId.longValue());
+        Materia materia = materiaService.findById(materiaId.longValue());
 
         AlumnoMateria am = new AlumnoMateria();
         am.setId(id);
