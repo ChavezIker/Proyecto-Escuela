@@ -10,10 +10,10 @@
     <div class="text-center">
         <h1 class="mb-4">Sistema de Gestión Escolar</h1>
         <div class="list-group w-50 mx-auto">
-            <a href="AlumnoServlet" class="list-group-item list-group-item-action">Catálogo Alumnos</a>
-            <a href="MateriaServlet" class="list-group-item list-group-item-action">Catálogo Materias</a>
-            <a href="ProfesorServlet" class="list-group-item list-group-item-action">Catálogo Profesores</a>
-            <a href="ProfesorMateriaServlet" class="list-group-item list-group-item-action">Catálogo Profesor Materia</a>
+            <a href="Alumnos.jsp" class="list-group-item list-group-item-action">Catálogo Alumnos</a>
+            <a href="Materias.jsp" class="list-group-item list-group-item-action">Catálogo Materias</a>
+            <a href="Profesores.jsp" class="list-group-item list-group-item-action">Catálogo Profesores</a>
+            <a href="ProfesorMaterias.jsp" class="list-group-item list-group-item-action">Catálogo Profesor Materia</a>
             <a href="AlumnoMateriaServlet" class="list-group-item list-group-item-action">Catálogo Alumno Materia</a>
         </div>
     </div>
